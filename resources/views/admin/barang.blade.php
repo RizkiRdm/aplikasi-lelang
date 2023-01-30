@@ -4,7 +4,7 @@
     <x-sidebar>
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
-            <a class="nav-link" href="/">
+            <a class="nav-link" href="{{ url('/dashboard/admin') }}">
                 <span>Dashboard</span>
             </a>
         </li>
@@ -19,7 +19,7 @@
 
         {{-- data barang --}}
         <li class="nav-item">
-            <a class="nav-link" href="/barang">
+            <a class="nav-link" href="{{ url('/dashboard/admin/barang') }}">
                 <span>Data Barang</span>
             </a>
         </li>
@@ -33,11 +33,12 @@
         </div>
 
         <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{{ url('/dashboard/admin/laporan') }}">
                 <span>Laporan lelang</span>
             </a>
         </li>
     </x-sidebar>
+
 
     {{-- topbar --}}
     <x-pageContent>
@@ -89,20 +90,22 @@
         </nav>
         <x-content title='Barang'>
             {{-- Table barang --}}
-            <form action="" method="post">
-                {{-- Pagination --}}
+            <form action="" method="post" class="d-flex justify-content-start my-2">
+                {{-- Add data --}}
+                <button type="submit" class="btn btn-primary">Add Data</button>
             </form>
             <div class="row d-flex justify-content-center align-items-center">
                 <div class="col-12">
                     {{-- card component --}}
                     <x-card title="List barang yang di sedang lelang">
+                        <h2>pagination</h2>
                         <table class="table">
                             <thead>
                                 <tr>
                                     <td>#</td>
                                     <td>Nama Barang</td>
                                     <td>harga tertinggi</td>
-                                    <td>Sisa waktu</td>
+                                    <td class="text-center">Aksi</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -111,7 +114,10 @@
                                     <td>Sample</td>
                                     <td>Sample</td>
                                     <td>Sample</td>
-                                    <td>Sample</td>
+                                    <td class="text-center">
+                                        <a href="" class="btn badge text-bg-warning">Edit</a>
+                                        <a href="" class="btn badge text-bg-danger">Hapus</a>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>

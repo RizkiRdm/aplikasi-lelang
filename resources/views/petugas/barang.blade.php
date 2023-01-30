@@ -4,7 +4,7 @@
     <x-sidebar>
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
-            <a class="nav-link" href="{{ url('/dashboard/admin') }}">
+            <a class="nav-link" href="/petugas/dashboard">
                 <span>Dashboard</span>
             </a>
         </li>
@@ -19,7 +19,7 @@
 
         {{-- data barang --}}
         <li class="nav-item">
-            <a class="nav-link" href="{{ url('/dashboard/admin/barang') }}">
+            <a class="nav-link" href="/petugas/barang">
                 <span>Data Barang</span>
             </a>
         </li>
@@ -33,7 +33,7 @@
         </div>
 
         <li class="nav-item">
-            <a class="nav-link" href="{{ url('/dashboard/admin/laporan') }}">
+            <a class="nav-link" href="/petugas/laporan">
                 <span>Laporan lelang</span>
             </a>
         </li>
@@ -42,6 +42,18 @@
     {{-- topbar --}}
     <x-pageContent>
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+            {{-- Searching --}}
+            <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                <div class="input-group">
+                    <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                        aria-label="Search" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button">
+                            Cari
+                        </button>
+                    </div>
+                </div>
+            </form>
             <ul class="navbar-nav ms-auto mx-2">
                 @auth
                     {{-- jika user sudah login --}}
@@ -75,75 +87,41 @@
                 @endauth
             </ul>
         </nav>
-        <x-content title='Dashboard'>
-            <!-- Content Row -->
-            <div class="row">
-                <!-- Pending Requests Card Example -->
-                <div class="col-xl-6 col-md-6 col-12 mb-4">
-                    <div class="card border-left-success shadow h-100 py-2">
-                        <div class="card-body">
-                            <div class="row no-gutters align-items-center">
-                                <div class="col mr-2">
-                                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                        Pendapatan dari lelang
-                                    </div>
-                                    <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                        10.000.00
-                                    </div>
-                                </div>
-                                <div class="col-auto">
-                                    <i class="fas fa-comments fa-2x text-gray-300"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- barang di lelang Card Example -->
-                <div class="col-xl-6 col-md-6 col-12 mb-4">
-                    <div class="card border-left-primary shadow h-100 py-2">
-                        <div class="card-body">
-                            <div class="row no-gutters align-items-center px-2">
-                                <div class="col mr-2">
-                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                        jumlah barang di lelang
-                                    </div>
-                                    <div class="h5 mb-0 font-weight-bold text-gray-800">10 Barang</div>
-                                </div>
-                                <div class="col-auto">
-                                    <i class="fas fa-comments fa-2x text-gray-300"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+        <x-content title='Barang'>
+            {{-- Table barang --}}
+            <form action="" method="post" class="d-flex justify-content-start my-2">
+                {{-- Add data --}}
+                <button type="submit" class="btn btn-primary">Add Data</button>
+            </form>
             <div class="row d-flex justify-content-center align-items-center">
                 <div class="col-12">
                     {{-- card component --}}
                     <x-card title="List barang yang di sedang lelang">
+                        <h2>pagination</h2>
                         <table class="table">
                             <thead>
                                 <tr>
                                     <td>#</td>
                                     <td>Nama Barang</td>
                                     <td>harga tertinggi</td>
-                                    <td>Sisa waktu</td>
+                                    <td class="text-center">Aksi</td>
                                 </tr>
                             </thead>
                             <tbody>
+                                {{-- Data barang --}}
                                 <tr>
                                     <td>Sample</td>
                                     <td>Sample</td>
                                     <td>Sample</td>
-                                    <td>Sample</td>
+                                    <td class="text-center">
+                                        <a href="" class="btn badge text-bg-warning">Edit</a>
+                                        <a href="" class="btn badge text-bg-danger">Hapus</a>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
                     </x-card>
                 </div>
-
             </div>
         </x-content>
     </x-pageContent>

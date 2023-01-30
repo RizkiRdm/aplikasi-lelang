@@ -4,7 +4,7 @@
     <x-sidebar>
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
-            <a class="nav-link" href="{{ url('/dashboard/admin') }}">
+            <a class="nav-link" href="/petugas/dashboard">
                 <span>Dashboard</span>
             </a>
         </li>
@@ -19,7 +19,7 @@
 
         {{-- data barang --}}
         <li class="nav-item">
-            <a class="nav-link" href="{{ url('/dashboard/admin/barang') }}">
+            <a class="nav-link" href="/petugas/barang">
                 <span>Data Barang</span>
             </a>
         </li>
@@ -33,7 +33,7 @@
         </div>
 
         <li class="nav-item">
-            <a class="nav-link" href="{{ url('/dashboard/admin/laporan') }}">
+            <a class="nav-link" href="/petugas/laporan">
                 <span>Laporan lelang</span>
             </a>
         </li>
@@ -75,47 +75,10 @@
                 @endauth
             </ul>
         </nav>
-        <x-content title='Dashboard'>
-            <!-- Content Row -->
+        <x-content title='Laporan'>
             <div class="row">
-                <!-- Pending Requests Card Example -->
-                <div class="col-xl-6 col-md-6 col-12 mb-4">
-                    <div class="card border-left-success shadow h-100 py-2">
-                        <div class="card-body">
-                            <div class="row no-gutters align-items-center">
-                                <div class="col mr-2">
-                                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                        Pendapatan dari lelang
-                                    </div>
-                                    <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                        10.000.00
-                                    </div>
-                                </div>
-                                <div class="col-auto">
-                                    <i class="fas fa-comments fa-2x text-gray-300"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- barang di lelang Card Example -->
-                <div class="col-xl-6 col-md-6 col-12 mb-4">
-                    <div class="card border-left-primary shadow h-100 py-2">
-                        <div class="card-body">
-                            <div class="row no-gutters align-items-center px-2">
-                                <div class="col mr-2">
-                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                        jumlah barang di lelang
-                                    </div>
-                                    <div class="h5 mb-0 font-weight-bold text-gray-800">10 Barang</div>
-                                </div>
-                                <div class="col-auto">
-                                    <i class="fas fa-comments fa-2x text-gray-300"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-12 mb-3 d-flex justify-content-end">
+                    <button type="submit" class="btn btn-success">Generate Laporan</button>
                 </div>
             </div>
 
@@ -129,7 +92,7 @@
                                     <td>#</td>
                                     <td>Nama Barang</td>
                                     <td>harga tertinggi</td>
-                                    <td>Sisa waktu</td>
+                                    <td>Nama Pemenang</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -143,7 +106,6 @@
                         </table>
                     </x-card>
                 </div>
-
             </div>
         </x-content>
     </x-pageContent>

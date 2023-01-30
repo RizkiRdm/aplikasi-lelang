@@ -7,9 +7,9 @@
     <title>Lelang ID</title>
 
     {{-- link style css --}}
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     {{-- link bootstrap  --}}
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     {{-- Hot Reload --}}
     @vite([])
 </head>
@@ -22,7 +22,7 @@
     </div>
 
     {{-- link bootstrap js --}}
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
 </body>
 
 </html>
