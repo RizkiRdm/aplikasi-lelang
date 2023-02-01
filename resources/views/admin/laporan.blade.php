@@ -37,6 +37,16 @@
                 <span>Laporan lelang</span>
             </a>
         </li>
+        {{-- tambah petugas --}}
+        <div class="sidebar-heading">
+            Petugas
+        </div>
+
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url('/dashboard/admin/petugas') }}">
+                <span>Petugas</span>
+            </a>
+        </li>
     </x-sidebar>
 
 
@@ -91,13 +101,17 @@
                             <thead>
                                 <tr>
                                     <td>#</td>
+                                    <td>Tanggal</td>
+                                    <td>Nama Pemenang</td>
+                                    <td>Lama lelang</td>
                                     <td>Nama Barang</td>
                                     <td>harga tertinggi</td>
-                                    <td>Sisa waktu</td>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
+                                    <td>Sample</td>
+                                    <td>Sample</td>
                                     <td>Sample</td>
                                     <td>Sample</td>
                                     <td>Sample</td>

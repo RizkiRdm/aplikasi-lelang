@@ -37,6 +37,16 @@
                 <span>Laporan lelang</span>
             </a>
         </li>
+                {{-- tambah petugas --}}
+                <div class="sidebar-heading">
+                    Petugas
+                </div>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/dashboard/admin/petugas') }}">
+                        <span>Petugas</span>
+                    </a>
+                </li>
     </x-sidebar>
 
 

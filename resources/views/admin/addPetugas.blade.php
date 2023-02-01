@@ -44,7 +44,7 @@
         </div>
 
         <li class="nav-item">
-            <a class="nav-link" href="{{ url('/dashboard/admin/petugas ') }}">
+            <a class="nav-link" href="{{ url('/dashboard/admin/petugas') }}">
                 <span>Petugas</span>
             </a>
         </li>

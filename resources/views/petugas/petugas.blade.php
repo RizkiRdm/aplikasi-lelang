@@ -4,7 +4,7 @@
     <x-sidebar>
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
-            <a class="nav-link" href="/petugas/dashboard">
+            <a class="nav-link" href="{{ url('/dashboard/petugas') }}">
                 <span>Dashboard</span>
             </a>
         </li>
@@ -19,7 +19,7 @@
 
         {{-- data barang --}}
         <li class="nav-item">
-            <a class="nav-link" href="/petugas/barang">
+            <a class="nav-link" href="{{ url('/dashboard/petugas/barang') }}">
                 <span>Data Barang</span>
             </a>
         </li>
@@ -33,7 +33,7 @@
         </div>
 
         <li class="nav-item">
-            <a class="nav-link" href="/petugas/laporan">
+            <a class="nav-link" href="{{ url('/dashboard/petugas/laporan') }}">
                 <span>Laporan lelang</span>
             </a>
         </li>
