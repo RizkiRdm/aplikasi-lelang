@@ -1,4 +1,4 @@
-<a href="{{ url('/detail') }}" class="text-decoration-none">
+<a href="{{ url('/detail') }}" class="text-decoration-none" id="produk">
     <div class="card">
         <div class="card-title">
             {{-- gambar produk --}}
