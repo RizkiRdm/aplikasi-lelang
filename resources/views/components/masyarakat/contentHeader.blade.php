@@ -16,7 +16,7 @@
                         disini dan</p>
                 </div>
                 <div class="d-flex justify-content-md-start justify-content-center">
-                    <a href="#" class="btn btn-primary btn-lg">Belanja Sekarang</a>
+                    <a href="#produk" class="btn btn-primary btn-lg">Belanja Sekarang</a>
                 </div>
             </div>
         </div>
